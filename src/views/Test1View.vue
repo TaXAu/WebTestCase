@@ -72,7 +72,32 @@ const form = reactive({
 });
 
 const onSubmit = () => {
-  console.log("submit!");
+    if(form.name === "") {
+        alert("Please input activity name");
+        return;
+    }
+    else if(form.region === "") {
+        alert("Please select activity zone");
+        return;
+    }
+    else if(form.date1 === "" || form.date2 === "") {
+        alert("Please select activity time");
+        return;
+    }
+    else if(form.type.length === 0) {
+        alert("Please select activity type");
+        return;
+    }
+    else if(form.resource === "") {
+        alert("Please select activity resource");
+        return;
+    }
+    else if(form.desc === "") {
+        alert("Please input activity description");
+        return;
+    }
+    else
+        alert("提交成功！");
 };
 
 export default {
